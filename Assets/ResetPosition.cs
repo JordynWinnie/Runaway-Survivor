@@ -5,21 +5,16 @@ using UnityEngine;
 
 public class ResetPosition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool canTeleport = true;
+
+    private void OnCollisionEnter(Collision other)
     {
+        
+        print("Teleported!");
+        other.transform.Translate(new Vector3(0, 0, -850), Space.World);
+        
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        other.transform.Translate(new Vector3(0, 0, -500), Space.World);
-    }
-  
+    
 }

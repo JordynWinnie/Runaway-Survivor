@@ -41,7 +41,7 @@ public class GenerateObstacles : MonoBehaviour
         var x = locationToGenerate.position.x - 5;
         var y = 0;
         var z = locationToGenerate.position.z;
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 17; i++)
         {
             for (int j = 0; j < 3; j++)
             {
