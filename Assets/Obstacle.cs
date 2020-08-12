@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision other)
     {
-        print("Player got hit!");
+        //print("Player got hit!");
         Destroy(gameObject);
     }
 }

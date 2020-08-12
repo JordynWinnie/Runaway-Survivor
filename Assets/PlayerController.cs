@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics.gravity = Physics.gravity * 2;
         rb = GetComponent<Rigidbody>();
         playerPosition = PlayerPositionState.Middle;
     }
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+        
         switch (playerPosition)
         {
             case PlayerPositionState.Right:
@@ -61,7 +64,7 @@ public class PlayerController : MonoBehaviour
         //print(rb.velocity);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = Vector3.up * jumpSpeed;
+            rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
             isGrounded = false;
         }
 
@@ -89,5 +92,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         transform.Translate(Vector3.forward * runningSpeed * Time.deltaTime);
+        
     }
 }

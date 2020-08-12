@@ -19,7 +19,7 @@ public class ResetPosition : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        other.transform.Translate(new Vector3(0, 0, -400), Space.World);
+        other.transform.Translate(new Vector3(0, 0, -500), Space.World);
     }
   
 }
