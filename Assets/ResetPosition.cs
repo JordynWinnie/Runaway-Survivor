@@ -17,8 +17,11 @@ public class ResetPosition : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        other.transform.Translate(new Vector3(0, 0, -150));
+        var otherTrans = other.transform;
+        print(otherTrans.position.z);
+        other.transform.position = new Vector3(otherTrans.position.x, otherTrans.position.y, -300);
     }
+  
 }

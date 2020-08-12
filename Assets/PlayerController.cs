@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public PlayerPositionState playerPosition;
     [SerializeField] float jumpSpeed = 10.0f;
-    [SerializeField] float gravity = 20.0f;
+    [SerializeField] float runningSpeed = 10f;
     public bool isGrounded = false;
 
     // Start is called before the first frame update
@@ -64,6 +64,20 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
             isGrounded = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isGrounded)
+        {
+            rb.AddForce(Vector3.down * jumpSpeed * 5f, ForceMode.Impulse);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        {
+            transform.localScale = new Vector3(1, 0.75f, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1,1,1);
+        }
     }
 
     
@@ -74,6 +88,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(Vector3.forward);
+        transform.Translate(Vector3.forward * runningSpeed * Time.deltaTime);
     }
 }
