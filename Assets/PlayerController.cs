@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         //print(rb.velocity);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
+            rb.velocity = Vector3.up * jumpSpeed;
             isGrounded = false;
         }
 
