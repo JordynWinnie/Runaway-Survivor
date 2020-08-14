@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
-            transform.localScale = new Vector3(1, 0.75f, 1);
+            transform.localScale = new Vector3(1, 0.5f, 1);
         }
         else
         {
