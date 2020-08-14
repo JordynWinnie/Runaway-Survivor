@@ -6,60 +6,61 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
+
     public enum PlayerPositionState { Right, Left, Middle };
 
+    public float distanceBetweenLanes = 15f;
     public PlayerPositionState playerPosition;
-    [SerializeField] float jumpSpeed = 10.0f;
-    [SerializeField] float runningSpeed = 10f;
+    [SerializeField] private float jumpSpeed = 10.0f;
+    [SerializeField] private float runningSpeed = 10f;
     public bool isGrounded = false;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Physics.gravity = Physics.gravity * 2;
         rb = GetComponent<Rigidbody>();
         playerPosition = PlayerPositionState.Middle;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-       
-        
         switch (playerPosition)
         {
             case PlayerPositionState.Right:
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     playerPosition = PlayerPositionState.Middle;
-                    transform.Translate(Vector3.left * 5f);
+                    transform.Translate(Vector3.left * distanceBetweenLanes);
                 }
                 break;
+
             case PlayerPositionState.Left:
                 if (Input.GetKeyDown(KeyCode.D))
                 {
                     playerPosition = PlayerPositionState.Middle;
-                    transform.Translate(Vector3.right * 5f);
+                    transform.Translate(Vector3.right * distanceBetweenLanes);
                 }
                 break;
+
             case PlayerPositionState.Middle:
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     //Going Left:
                     playerPosition = PlayerPositionState.Left;
-                    transform.Translate(Vector3.left * 5f);
+                    transform.Translate(Vector3.left * distanceBetweenLanes);
                 }
                 if (Input.GetKeyDown(KeyCode.D))
                 {
                     //GOing right:
                     playerPosition = PlayerPositionState.Right;
-                    transform.Translate(Vector3.right * 5f);
+                    transform.Translate(Vector3.right * distanceBetweenLanes);
                 }
                 break;
+
             default:
                 break;
         }
-        
 
         //print(rb.velocity);
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -79,11 +80,12 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            transform.localScale = new Vector3(1,1,1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
+
+        rb.AddForce(Vector3.down * Time.deltaTime * jumpSpeed * 2, ForceMode.Impulse);
     }
 
-    
     private void OnCollisionEnter()
     {
         isGrounded = true;
@@ -92,6 +94,5 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         transform.Translate(Vector3.forward * runningSpeed * Time.deltaTime);
-        
     }
 }
