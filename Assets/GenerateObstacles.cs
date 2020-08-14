@@ -58,7 +58,7 @@ public class GenerateObstacles : MonoBehaviour
                 x += positionXOffSet;
             }
 
-            x = -positionXOffSet;
+            x = locationToGenerate.position.x - positionXOffSet;
             z += positionZOffSet;
         }
     }
