@@ -10,6 +10,7 @@ public class GenerateObstacles : MonoBehaviour
     [SerializeField] private Transform locationToGenerate;
 
     [SerializeField] private List<GameObject> obstacleList;
+    [SerializeField] private List<GameObject> hardObstacleList;
     [SerializeField] private float positionXOffSet = 15f;
     [SerializeField] private float positionZOffSet = 50f;
     [SerializeField] private int generationUpperLimit = 32;
@@ -47,9 +48,21 @@ public class GenerateObstacles : MonoBehaviour
         var z = locationToGenerate.position.z;
         for (int i = 0; i < generationUpperLimit + 1; i++)
         {
+            if (Random.Range(0, 10) == 0)
+            {
+                continue;
+            }
             for (int j = 0; j < 3; j++)
             {
-                if (Random.Range(0, obstacleSpawnChance) == 0)
+                if (Random.Range(0, 50) == 0)
+                {
+                    var obstacle = Instantiate(hardObstacleList[Random.Range(0, hardObstacleList.Count)], new Vector3(x, y, z),
+                    Quaternion.identity);
+                    obstacle.transform.parent = transform;
+                    break;
+                }
+
+                if (Random.Range(0, 2) == 0)
                 {
                     var obstacle = Instantiate(obstacleList[Random.Range(0, obstacleList.Count)], new Vector3(x, y, z),
                     Quaternion.identity);

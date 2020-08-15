@@ -651,7 +651,12 @@ PrefabInstance:
     - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
         type: 3}
       propertyPath: obstacleList.Array.size
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
+        type: 3}
+      propertyPath: hardObstacleList.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
         type: 3}
@@ -680,6 +685,18 @@ PrefabInstance:
       propertyPath: obstacleSpawnChance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
+        type: 3}
+      propertyPath: obstacleList.Array.data[1]
+      value: 
+      objectReference: {fileID: 5725827247606878133, guid: 289ae9f38cf51af47be6b4026af90db1,
+        type: 3}
+    - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
+        type: 3}
+      propertyPath: hardObstacleList.Array.data[0]
+      value: 
+      objectReference: {fileID: 9196912580365853627, guid: 99ac96880425bba438eab3972af857f2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2407d88f259544b48afc21dddd20199d, type: 3}
 --- !u!850595691 &490497929
@@ -2131,6 +2148,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1090004099}
   gameOverUI: {fileID: 115444416}
   gameUI: {fileID: 1235889043}
+  attackerBarUpperLimit: 3
 --- !u!4 &1272022179
 Transform:
   m_ObjectHideFlags: 0
@@ -2329,7 +2347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321904085}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalPosition: {x: 25, y: 0, z: 0}
   m_LocalScale: {x: 45, y: 1, z: 2000}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2877,6 +2895,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
         type: 3}
+      propertyPath: obstacleList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
+        type: 3}
+      propertyPath: hardObstacleList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
+        type: 3}
       propertyPath: locationToGenerate
       value: 
       objectReference: {fileID: 847470466}
@@ -2890,5 +2918,17 @@ PrefabInstance:
       propertyPath: obstacleSpawnChance
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
+        type: 3}
+      propertyPath: obstacleList.Array.data[1]
+      value: 
+      objectReference: {fileID: 5725827247606878133, guid: 289ae9f38cf51af47be6b4026af90db1,
+        type: 3}
+    - target: {fileID: 1193178728713091531, guid: 2407d88f259544b48afc21dddd20199d,
+        type: 3}
+      propertyPath: hardObstacleList.Array.data[0]
+      value: 
+      objectReference: {fileID: 9196912580365853627, guid: 99ac96880425bba438eab3972af857f2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2407d88f259544b48afc21dddd20199d, type: 3}
