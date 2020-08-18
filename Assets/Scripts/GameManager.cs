@@ -14,10 +14,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject gameUI;
 
+    [SerializeField] private GameObject attacker;
+
     public int attackerBarUpperLimit = 3;
     public static float playerSpeed;
     private int score = 0;
-    private float attackerBarCount = 3f;
+    private float attackerBarCount = 1.5f;
     public static GameManager instance;
     public static int hiScore = 0;
     private float minSpeed = 75;
@@ -71,6 +73,15 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if (attackerBarCount <= 1)
+        {
+            ChangeAttackerState(true);
+        }
+        else
+        {
+            ChangeAttackerState(false);
+        }
+
         attackerBarCount = Mathf.Clamp(attackerBarCount, 0, attackerBarUpperLimit);
         attackerBar.text = $"Attacker Bar: {attackerBarCount}/{attackerBarUpperLimit}";
         playerSpeed = Mathf.Clamp(playerSpeed, minSpeed, 150);
@@ -79,6 +90,11 @@ public class GameManager : MonoBehaviour
     public void AddAttackerScore(float score)
     {
         attackerBarCount += score;
+    }
+
+    public void ChangeAttackerState(bool isEnabled)
+    {
+        attacker.SetActive(isEnabled);
     }
 
     private IEnumerator AddScore()
