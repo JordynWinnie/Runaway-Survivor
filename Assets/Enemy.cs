@@ -13,8 +13,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        print("Hello");
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            
             transform.localScale = new Vector3(1, 0.5f, 1);
         }
         else
