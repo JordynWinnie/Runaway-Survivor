@@ -14,7 +14,7 @@ public class TrainPowerup : MonoBehaviour
         {
             if (Random.Range(0, 11) == 0)
             {
-                var powerup = Instantiate(powerupList[0], location.position, Quaternion.identity);
+                var powerup = Instantiate(powerupList[Random.Range(0, powerupList.Length)], location.position, Quaternion.identity);
                 powerup.transform.parent = transform;
                 break;
             }
