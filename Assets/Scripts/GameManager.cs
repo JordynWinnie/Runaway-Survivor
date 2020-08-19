@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
             score++;
             scoreText.text = $"Score: {score.ToString().PadLeft(10, '0')}";
 
-            if (score % 5000 == 0)
+            if (score % 1000 == 0)
             {
                 attackerBarUpperLimit++;
                 attackerBarUpperLimit = Mathf.Clamp(attackerBarUpperLimit, 0, 5);
