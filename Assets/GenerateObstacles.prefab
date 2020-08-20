@@ -59,11 +59,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationToGenerate: {fileID: 0}
   obstacleList:
-  - {fileID: 2337769007654777071, guid: 14d3c2cc27bd59d41bfe269c994c1f52, type: 3}
-  - {fileID: 9196912580365853627, guid: 99ac96880425bba438eab3972af857f2, type: 3}
-  - {fileID: 4152482198813310333, guid: 794789673fe58254d9130bad12293f37, type: 3}
-  - {fileID: 5725827247606878133, guid: 289ae9f38cf51af47be6b4026af90db1, type: 3}
+  - {fileID: 2771038809273646652, guid: c7ad599a0a3609d439cca48270f042c4, type: 3}
+  - {fileID: 3703658513699921023, guid: b57df99f01a85bd48a8552e8a48c678b, type: 3}
+  - {fileID: 5835146437226131014, guid: 7659a9da8a54dfd48bceee6bf1988ab7, type: 3}
+  hardObstacleList:
+  - {fileID: 2771038809273646652, guid: c7ad599a0a3609d439cca48270f042c4, type: 3}
+  - {fileID: 3703658513699921023, guid: b57df99f01a85bd48a8552e8a48c678b, type: 3}
+  - {fileID: 5835146437226131014, guid: 7659a9da8a54dfd48bceee6bf1988ab7, type: 3}
   positionXOffSet: 15
-  positionZOffSet: 25
-  generationUpperLimit: 16
+  positionZOffSet: 100
+  generationUpperLimit: 12
+  obstacleSpawnChance: 4
   generateAllowed: 1

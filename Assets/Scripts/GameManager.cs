@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = isDemoMode ? 0.75f : 1f;
         }
-        
+
         playerSpeed = Mathf.Clamp(playerSpeed, minSpeed, 150f);
     }
 
