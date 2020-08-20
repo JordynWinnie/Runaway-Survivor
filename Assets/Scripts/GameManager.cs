@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
     private float attackerBarCount = 1.5f;
     public static GameManager instance;
     public static int hiScore = 0;
-    private float minSpeed = 75;
+    private float minSpeed = 75f;
+
+    public bool isDemoMode = false;
 
     private void Awake()
     {
@@ -52,6 +54,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            isDemoMode = !isDemoMode;
+        }
         if (attackerBarCount <= 0)
         {
             if (score > hiScore)
@@ -84,7 +90,9 @@ public class GameManager : MonoBehaviour
 
         attackerBarCount = Mathf.Clamp(attackerBarCount, 0, attackerBarUpperLimit);
         attackerBar.text = $"Attacker Bar: {attackerBarCount}/{attackerBarUpperLimit}";
-        playerSpeed = Mathf.Clamp(playerSpeed, minSpeed, 150);
+
+        Time.timeScale = isDemoMode ? 0.75f : 1f;
+        playerSpeed = Mathf.Clamp(playerSpeed, minSpeed, 150f);
     }
 
     public void AddAttackerScore(float score)

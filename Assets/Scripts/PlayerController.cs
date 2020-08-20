@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runningSpeed = 10f;
     public bool isGrounded = false;
 
+    public bool isDemoMode = false;
     // Start is called before the first frame update
     private void Start()
     {
@@ -25,6 +26,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
+        
         runningSpeed = GameManager.playerSpeed;
         switch (playerPosition)
         {
