@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         attackerBar.text = $"Attacker Bar: {attackerBarCount}/{attackerBarUpperLimit}";
         if (!isLost)
         {
-            Time.timeScale = isDemoMode ? 0.75f : 1f;
+            Time.timeScale = isDemoMode ? 0.5f : 1f;
         }
 
         playerSpeed = Mathf.Clamp(playerSpeed, minSpeed, 150f);
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
             score++;
             scoreText.text = $"Score: {score.ToString().PadLeft(10, '0')}";
 
-            if (score % 1000 == 0)
+            if (score % 300 == 0)
             {
                 attackerBarUpperLimit++;
                 attackerBarUpperLimit = Mathf.Clamp(attackerBarUpperLimit, 0, 5);
