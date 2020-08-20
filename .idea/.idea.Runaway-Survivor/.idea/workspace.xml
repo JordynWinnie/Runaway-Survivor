@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c08ab05-9b59-4e4c-8a55-4103af79dc7f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runaway-Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runaway-Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/FloorMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/FloorMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RailroadObject (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RailroadObject (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenePrefabs.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScenePrefabs.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerateObstacles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GenerateObstacles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runaway-Survivor/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runaway-Survivor/.idea/indexLayout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +76,7 @@
       <updated>1597857924094</updated>
       <workItem from="1597857929317" duration="10000" />
       <workItem from="1597857964712" duration="222000" />
-      <workItem from="1597885703434" duration="2170000" />
+      <workItem from="1597885703434" duration="2502000" />
     </task>
     <servers />
   </component>

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static int hiScore = 0;
     private float minSpeed = 75f;
+    private bool isLost = false;
 
     public bool isDemoMode = false;
 
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
         }
         if (attackerBarCount <= 0)
         {
+            isLost = true;
             if (score > hiScore)
             {
                 hiScore = score;
@@ -90,8 +92,11 @@ public class GameManager : MonoBehaviour
 
         attackerBarCount = Mathf.Clamp(attackerBarCount, 0, attackerBarUpperLimit);
         attackerBar.text = $"Attacker Bar: {attackerBarCount}/{attackerBarUpperLimit}";
-
-        Time.timeScale = isDemoMode ? 0.75f : 1f;
+        if (!isLost)
+        {
+            Time.timeScale = isDemoMode ? 0.75f : 1f;
+        }
+        
         playerSpeed = Mathf.Clamp(playerSpeed, minSpeed, 150f);
     }
 
