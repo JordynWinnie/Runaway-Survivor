@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                Application.Quit();
+                SceneManager.LoadScene(0);
             }
         }
 
