@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+# Welcome to Runaway Survivor's Information Page
 
-You can use the [editor on GitHub](https://github.com/JordynWinnie/Runaway-Survivor/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Gameplay Trailer
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[![Runaway Survivor Trailer](https://img.youtube.com/vi/Q9tDv9YG-K8/0.jpg)](https://youtu.be/Q9tDv9YG-K8)
 
-### Markdown
+## Overview:
+Runaway Survivor is an Endless Runner based on the popular mobile game [Subway Surfers](https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en_SG&gl=US) for a game design and modelling subject. The theme chosen was horror and all assets, except for the player model was created by me. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Here are some quick links:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JordynWinnie/Runaway-Survivor/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+1. [Game Design Document](https://1drv.ms/b/s!Ai1FM8OsG3Srgt1UaUESm3MZlF7I8g )
+2. [3D Model Showcase](https://youtu.be/f_fwXiK2LT8) 
+3. [Model Information Showcase](https://1drv.ms/b/s!Ai1FM8OsG3Srgt1W8JgTL1EODlFD2A?e=2QimXB ) 
