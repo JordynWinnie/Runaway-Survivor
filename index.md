@@ -5,7 +5,7 @@
 [![Runaway Survivor Trailer](https://img.youtube.com/vi/Q9tDv9YG-K8/0.jpg)](https://youtu.be/Q9tDv9YG-K8)
 
 ## Overview:
-Runaway Survivor is an Endless Runner based on the popular mobile game [Subway Surfers](https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en_SG&gl=US) for a game design and modelling subject. The theme chosen was horror and all assets, except for the player model was created by me. 
+Runaway Survivor is an Endless Runner based on the popular mobile game [Subway Surfers](https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en_SG&gl=US) for a game design and modelling subject. The theme chosen was horror and all assets, except for the player model were created by me. 
 
 ## Here are some quick links:
 
